@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydevtoolbox"
+version = "0.2.0"
+description = "ShipCheck: Python package release auditing tool to catch packaging and PyPI publishing issues before release"
+readme = "README.md"
+authors = [
+    { name = "Izere Louise", email = "louiseizere1@gmail.com" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+dependencies = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+build = ["build>=1.0.0"]
+twine = ["twine>=5.0.0"]
+
+[project.scripts]
+shipcheck = "shipcheck.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/loui45/pydevtoolbox"
+Issues = "https://github.com/loui45/pydevtoolbox/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

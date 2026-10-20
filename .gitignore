@@ -1,0 +1,21 @@
+# Python build artifacts
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+test_env/
+venv/
+.venv/
+env/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables & secrets
+.env
+.env.*
+.pypirc
